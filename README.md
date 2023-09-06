@@ -35,12 +35,12 @@ To set up continuous testing, update the relevant properties in the conf files:
 
 - hostname - Continuous Testing Cloud url.
 
-- 'experitest:accessKey' - Access Key. For more information see: https://docs.experitest.com/display/TE/Obtaining+Access+Key
+- 'experitest:accessKey' - Access Key. For more information see: https://docs.digital.ai/bundle/TE/page/obtaining_access_key.html
 
 ### Uploading Application
 
 To start testing your application you have to upload it to the Continuous Testing cloud. 
-For full instructions on how to upload applications to Continuous Testing cloud see https://docs.experitest.com/display/COM/Upload+Applications.
+For full instructions on how to upload applications to Continuous Testing cloud see https://docs.digital.ai/bundle/COM/page/upload_applications.html.
 
 The project is configured with the EriBank demo applications for Android and iOS.
  
@@ -55,7 +55,7 @@ The project already contains two tests for the EriBank Application. You can add 
 ### Configuring Test Capabilities
 
 You can add custom capabilities under capabilities in the relevant conf file.
-For more information see https://docs.experitest.com/display/TE/Capabilties+in+Appium+Based+Tests.
+For more information see https://docs.digital.ai/bundle/TE/page/capabilties_in_appium_based_tests.html.
 
 Examples:
 
@@ -193,7 +193,7 @@ capabilities: [{
 
 ## Related Documentation
 
-To find out more about CT usage, features and best practices, visit our online [documentation](https://docs.experitest.com/display/TE/Test+Execution+Home).
+To find out more about CT usage, features and best practices, visit our online [documentation](hhttps://docs.digital.ai/bundle/TE/page/test_execution_home.html).
 
 ## Support
 
