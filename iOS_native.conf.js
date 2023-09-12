@@ -42,15 +42,18 @@ exports.config = {
     //  https://docs.experitest.com/display/TET/Webdriver.io+Starter+Code
     //
     capabilities: [{
-    
         platformName: 'IOS',
-        'digitalai:testName': "Quick Start iOS NATIVE Demo",
-        'digitalai:accessKey': "<ACCESS_KEY>",
-        'digitalai:appiumVersion': "1.22.3",
-        'appium:bundleId':  "com.experitest.ExperiBank",
-        'appium:app': 'cloud:com.experitest.ExperiBank',
-        'digitalai:deviceQuery': "@os='ios' and @category='PHONE'",
-        strictSSL: false
+        strictSSL: false,
+        'appium:options': {
+            'bundleId': "com.experitest.ExperiBank",
+            'app': "cloud:com.experitest.ExperiBank"
+        },
+        'digitalai:options': {
+            'testName': "Quick Start iOS NATIVE Demo",
+            'accessKey': "<ACCESS_KEY>",
+            'appiumVersion': "1.22.3",
+            'deviceQuery': "@os='ios' and @category='PHONE'",
+        },
     }],
 
     acceptSslCerts: true,

@@ -42,14 +42,16 @@ exports.config = {
     //  https://docs.experitest.com/display/TE/Webdriver.io+Starter+Code
 
     capabilities: [{
-        platformName: 'IOS',
-        'digitalai:testName': "Quick Start iOS WEB Demo",
-        'digitalai:accessKey': "<ACCESS_KEY>",
-        'digitalai:appiumVersion': "1.22.3",
-        browserName: 'safari',
-        'digitalai:deviceQuery': "@os='ios' and @category='PHONE'",
-        strictSSL: false
-    }
+        'platformName': 'IOS',
+        'browserName': 'safari',
+        'strictSSL': false,
+        'digitalai:options': {
+            'testName': "Quick Start iOS WEB Demo",
+            'accessKey': "<ACCESS_KEY>",
+            'appiumVersion': "1.22.3",
+            'deviceQuery': "@os='ios' and @category='PHONE'",
+        }
+    },
     ],
 
     acceptSslCerts: true,

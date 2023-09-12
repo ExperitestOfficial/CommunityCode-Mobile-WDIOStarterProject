@@ -63,11 +63,15 @@ Examples:
 ```
 capabilities: [{
     platformName: 'ANDROID',
-    'digitalai:testName': "Android Test",
-    'digitalai:accessKey': "<ACCESS_KEY>",
-    'appium:appPackage':  "<APP_NAME>",
-    'appium:app': 'cloud:<APP_NAME>/.<MAIN_ACTIVITY>',
-    'digitalai:deviceQuery': "@os='android' and @category='PHONE'",
+    'appium:options': {
+        'appPackage': "<APP_NAME>",
+        'app': "cloud:<APP_NAME>/.<MAIN_ACTIVITY>",
+    },
+    'digitalai:options': {
+        'testName': "Android Test",
+        'accessKey': "<ACCESS_KEY>",
+         'deviceQuery': "@os='android' and @category='PHONE'",
+    },
 }]
 ```
 
@@ -75,11 +79,15 @@ capabilities: [{
 ```
 capabilities: [{
     platformName: 'IOS',
-    'digitalai:testName': "iOS test",
-    'digitalai:accessKey': "<ACCESS_KEY>",
-    'appium:bundleId':  "<BUNDLE_ID>",
-    'appium:app': 'cloud:<BUNDLE_ID>',
-    'digitalai:deviceQuery': "@os='ios' and @category='PHONE'"
+    'appium:options': {
+        'bundleId': "<BUNDLE_ID>",
+        'app': "cloud:<BUNDLE_ID>"
+    },
+    'digitalai:options': {
+        'testName': ""iOS test",
+        'accessKey': "<ACCESS_KEY>",
+        'deviceQuery': "@os='ios' and @category='PHONE'",
+    },
 }]
 ```
 

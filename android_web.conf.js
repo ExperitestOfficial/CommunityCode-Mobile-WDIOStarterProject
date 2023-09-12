@@ -42,13 +42,15 @@ exports.config = {
     //  https://docs.experitest.com/display/TE/Webdriver.io+Starter+Code
 
     capabilities: [{
-        platformName: 'ANDROID',
-        'digitalai:testName': "Quick Start Android WEB Demo",
-        'digitalai:accessKey': "<ACCESS_KEY>",
-        'digitalai:appiumVersion': "1.22.3",
-        browserName: 'chrome',
-        'digitalai:deviceQuery': "@os='android' and @category='PHONE'",
-        strictSSL: false
+        'platformName': 'ANDROID',
+        'browserName': 'chrome',
+        'strictSSL': false,
+        'digitalai:options': {
+            'testName': "Quick Start Android WEB Demo",
+            'accessKey': "<ACCESS_KEY>",
+            'appiumVersion': "1.22.3",
+            'deviceQuery': "@os='android' and @category='PHONE'",
+        }
     },
     ],
 
