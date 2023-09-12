@@ -45,8 +45,8 @@ exports.config = {
         platformName: 'ANDROID',
         strictSSL: false,
         'appium:options': {
-        'appPackage': "com.experitest.ExperiBank",
-        'app': "cloud:com.experitest.ExperiBank/.LoginActivity",
+            'appPackage': "com.experitest.ExperiBank",
+            'app': "cloud:com.experitest.ExperiBank/.LoginActivity",
         },
         'digitalai:options': {
             'testName': "Quick Start Android NATIVE Demo",
