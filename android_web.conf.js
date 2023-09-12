@@ -42,9 +42,9 @@ exports.config = {
     //  https://docs.experitest.com/display/TE/Webdriver.io+Starter+Code
 
     capabilities: [{
-        'platformName': 'ANDROID',
-        'browserName': 'chrome',
-        'strictSSL': false,
+        platformName: 'ANDROID',
+        browserName: 'chrome',
+        strictSSL: false,
         'digitalai:options': {
             'testName': "Quick Start Android WEB Demo",
             'accessKey': "<ACCESS_KEY>",

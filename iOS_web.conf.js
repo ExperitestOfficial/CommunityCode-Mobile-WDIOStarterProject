@@ -42,9 +42,9 @@ exports.config = {
     //  https://docs.experitest.com/display/TE/Webdriver.io+Starter+Code
 
     capabilities: [{
-        'platformName': 'IOS',
-        'browserName': 'safari',
-        'strictSSL': false,
+        platformName: 'IOS',
+        browserName: 'safari',
+        strictSSL: false,
         'digitalai:options': {
             'testName': "Quick Start iOS WEB Demo",
             'accessKey': "<ACCESS_KEY>",
