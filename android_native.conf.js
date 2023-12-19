@@ -39,7 +39,7 @@ exports.config = {
     maxInstances: 10,
     //
     //  For more Capabilitites go to:
-    //  https://docs.experitest.com/display/TET/Webdriver.io+Starter+Code
+    //  https://docs.digital.ai/bundle/TE/page/webdriver_io_starter_code.html
     //
     capabilities: [{
         platformName: 'ANDROID',
