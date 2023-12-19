@@ -35,7 +35,7 @@ To set up continuous testing, update the relevant properties in the conf files:
 
 - hostname - Continuous Testing Cloud url.
 
-- 'experitest:accessKey' - Access Key. For more information see: https://docs.digital.ai/bundle/TE/page/obtaining_access_key.html
+- 'digitalai:accessKey' - Access Key. For more information see: https://docs.digital.ai/bundle/TE/page/obtaining_access_key.html
 
 ### Uploading Application
 
@@ -63,11 +63,15 @@ Examples:
 ```
 capabilities: [{
     platformName: 'ANDROID',
-    'experitest:testName': "Android Test",
-    'experitest:accessKey': "<ACCESS_KEY>",
-    'appium:appPackage':  "<APP_NAME>",
-    'appium:app': 'cloud:<APP_NAME>/.<MAIN_ACTIVITY>',
-    'appium:deviceQuery': "@os='android' and @category='PHONE'",
+    'appium:options': {
+        'appPackage': "<APP_NAME>",
+        'app': "cloud:<APP_NAME>/.<MAIN_ACTIVITY>",
+    },
+    'digitalai:options': {
+        'testName': "Android Test",
+        'accessKey': "<ACCESS_KEY>",
+         'deviceQuery': "@os='android' and @category='PHONE'",
+    },
 }]
 ```
 
@@ -75,11 +79,15 @@ capabilities: [{
 ```
 capabilities: [{
     platformName: 'IOS',
-    'experitest:testName': "iOS test",
-    'experitest:accessKey': "<ACCESS_KEY>",
-    'appium:bundleId':  "<BUNDLE_ID>",
-    'appium:app': 'cloud:<BUNDLE_ID>',
-    'appium:deviceQuery': "@os='ios' and @category='PHONE'"
+    'appium:options': {
+        'bundleId': "<BUNDLE_ID>",
+        'app': "cloud:<BUNDLE_ID>"
+    },
+    'digitalai:options': {
+        'testName': ""iOS test",
+        'accessKey': "<ACCESS_KEY>",
+        'deviceQuery': "@os='ios' and @category='PHONE'",
+    },
 }]
 ```
 
@@ -174,11 +182,11 @@ To test your application on different devices, specify different device serial n
 
 ```
 capabilities: [{
-        'experitest:serialnumber': '<SERIAL_NUMBER_1>',
+        'digitalai:serialnumber': '<SERIAL_NUMBER_1>',
         <CONFIGURATION_1>
     },
     {
-        'experitest:serialnumber': '<SERIAL_NUMBER_2>',
+        'digitalai:serialnumber': '<SERIAL_NUMBER_2>',
         <CONFIGURATION_2>
     },
     .
@@ -186,7 +194,7 @@ capabilities: [{
     .
     ,
     {
-        'experitest:serialnumber': '<SERIAL_NUMBER_n>',
+        'digitalai:serialnumber': '<SERIAL_NUMBER_n>',
         <CONFIGURATION_n>
     }]
 ```
