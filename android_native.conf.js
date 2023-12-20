@@ -4,7 +4,7 @@ exports.config = {
     // Runner Configuration
     // ====================
     //
-    // continuos testing cloud:
+    // Continuous Testing Cloud:
     hostname: '<CLOUD_URL>',
     protocol: 'https',
     port: 443,
