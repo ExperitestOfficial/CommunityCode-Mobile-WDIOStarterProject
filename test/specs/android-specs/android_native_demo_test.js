@@ -2,25 +2,25 @@ describe('LocalAndroidTest', () => {
     it('quickStartAndroidNativeDemo', myTest)
  })
  async function myTest() {
-   const username = await $('id=com.digitalai.ExperiBank:id/usernameTextField');
+   const username = await $('id=com.experitest.ExperiBank:id/usernameTextField');
    await username.setValue('company');
-   const password = await $('id=com.digitalai.ExperiBank:id/passwordTextField');
+   const password = await $('id=com.experitest.ExperiBank:id/passwordTextField');
    await password.setValue('company');
-   const loginButton = await $('id=com.digitalai.ExperiBank:id/loginButton');
+   const loginButton = await $('id=com.experitest.ExperiBank:id/loginButton');
    await loginButton.click();
-   const makePaymentButton = await $('id=com.digitalai.ExperiBank:id/makePaymentButton');
+   const makePaymentButton = await $('id=com.experitest.ExperiBank:id/makePaymentButton');
    await makePaymentButton.click();
-   const phoneNumber = await $("id=com.digitalai.ExperiBank:id/phoneTextField");
+   const phoneNumber = await $("id=com.experitest.ExperiBank:id/phoneTextField");
    await phoneNumber.setValue('0541234567');
-   const name = await $("id=com.digitalai.ExperiBank:id/nameTextField");
+   const name = await $("id=com.experitest.ExperiBank:id/nameTextField");
    await name.setValue('Jon Snow');
-   const amount = await $("id=com.digitalai.ExperiBank:id/amountTextField");
+   const amount = await $("id=com.experitest.ExperiBank:id/amountTextField");
    await amount.setValue('50');
-   const countryButton = await $("id=com.digitalai.ExperiBank:id/countryTextField");
+   const countryButton = await $("id=com.experitest.ExperiBank:id/countryTextField");
    await countryButton.click();
    const country = await $('//*[@text="Switzerland"]');
    await country.click();
-   const sendPaymentButton = await $("id=com.digitalai.ExperiBank:id/sendPaymentButton");
+   const sendPaymentButton = await $("id=com.experitest.ExperiBank:id/sendPaymentButton");
    await sendPaymentButton.click();
    const yesButton = await $("android:id/button1");
    await yesButton.click();
