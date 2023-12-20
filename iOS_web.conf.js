@@ -39,17 +39,19 @@ exports.config = {
     maxInstances: 10,
     //
     //  For more Capabilitites go to:
-    //  https://docs.digital.ai/bundle/TE/page/webdriver_io_starter_code.html
+    //  https://docs.experitest.com/display/TE/Webdriver.io+Starter+Code
 
     capabilities: [{
         platformName: 'IOS',
-        'digitalai:testName': "Quick Start iOS WEB Demo",
-        'digitalai:accessKey': "<ACCESS_KEY>",
-        'digitalai:appiumVersion': "1.22.3",
         browserName: 'safari',
-        'appium:deviceQuery': "@os='ios' and @category='PHONE'",
-        strictSSL: false
-    }
+        strictSSL: false,
+        'digitalai:options': {
+            'testName': "Quick Start iOS WEB Demo",
+            'accessKey': "<ACCESS_KEY>",
+            'appiumVersion': "1.22.3",
+            'deviceQuery': "@os='ios' and @category='PHONE'",
+        }
+    },
     ],
 
     acceptSslCerts: true,

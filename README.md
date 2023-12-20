@@ -35,12 +35,12 @@ To set up continuous testing, update the relevant properties in the conf files:
 
 - hostname - Continuous Testing Cloud url.
 
-- 'digitalai:accessKey' - Access Key. For more information see: https://docs.digital.ai/bundle/TE/page/obtaining_access_key.html
+- 'digitalai:accessKey' - Access Key. For more information see: https://docs.experitest.com/display/TE/Obtaining+Access+Key
 
 ### Uploading Application
 
 To start testing your application you have to upload it to the Continuous Testing cloud. 
-For full instructions on how to upload applications to Continuous Testing cloud see https://docs.digital.ai/bundle/COM/page/upload_applications.html.
+For full instructions on how to upload applications to Continuous Testing cloud see https://docs.experitest.com/display/COM/Upload+Applications.
 
 The project is configured with the EriBank demo applications for Android and iOS.
  
@@ -55,7 +55,7 @@ The project already contains two tests for the EriBank Application. You can add 
 ### Configuring Test Capabilities
 
 You can add custom capabilities under capabilities in the relevant conf file.
-For more information see https://docs.digital.ai/bundle/TE/page/capabilties_in_appium_based_tests.html.
+For more information see https://docs.experitest.com/display/TE/Capabilties+in+Appium+Based+Tests.
 
 Examples:
 
@@ -63,11 +63,15 @@ Examples:
 ```
 capabilities: [{
     platformName: 'ANDROID',
-    'digitalai:testName': "Android Test",
-    'digitalai:accessKey': "<ACCESS_KEY>",
-    'appium:appPackage':  "<APP_NAME>",
-    'appium:app': 'cloud:<APP_NAME>/.<MAIN_ACTIVITY>',
-    'appium:deviceQuery': "@os='android' and @category='PHONE'",
+    'appium:options': {
+        'appPackage': "<APP_NAME>",
+        'app': "cloud:<APP_NAME>/.<MAIN_ACTIVITY>",
+    },
+    'digitalai:options': {
+        'testName': "Android Test",
+        'accessKey': "<ACCESS_KEY>",
+         'deviceQuery': "@os='android' and @category='PHONE'",
+    },
 }]
 ```
 
@@ -75,11 +79,15 @@ capabilities: [{
 ```
 capabilities: [{
     platformName: 'IOS',
-    'digitalai:testName': "iOS test",
-    'digitalai:accessKey': "<ACCESS_KEY>",
-    'appium:bundleId':  "<BUNDLE_ID>",
-    'appium:app': 'cloud:<BUNDLE_ID>',
-    'appium:deviceQuery': "@os='ios' and @category='PHONE'"
+    'appium:options': {
+        'bundleId': "<BUNDLE_ID>",
+        'app': "cloud:<BUNDLE_ID>"
+    },
+    'digitalai:options': {
+        'testName': ""iOS test",
+        'accessKey': "<ACCESS_KEY>",
+        'deviceQuery': "@os='ios' and @category='PHONE'",
+    },
 }]
 ```
 
@@ -193,7 +201,7 @@ capabilities: [{
 
 ## Related Documentation
 
-To find out more about CT usage, features and best practices, visit our online [documentation](hhttps://docs.digital.ai/bundle/TE/page/test_execution_home.html).
+To find out more about CT usage, features and best practices, visit our online [documentation](https://docs.experitest.com/display/TE/Test+Execution+Home).
 
 ## Support
 

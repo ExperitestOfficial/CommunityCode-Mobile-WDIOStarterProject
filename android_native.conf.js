@@ -39,17 +39,21 @@ exports.config = {
     maxInstances: 10,
     //
     //  For more Capabilitites go to:
-    //  https://docs.digital.ai/bundle/TE/page/webdriver_io_starter_code.html
+    //  https://docs.experitest.com/display/TET/Webdriver.io+Starter+Code
     //
     capabilities: [{
         platformName: 'ANDROID',
-        'digitalai:testName': "Quick Start Android NATIVE Demo",
-        'digitalai:accessKey': "<ACCESS_KEY>",
-        'digitalai:appiumVersion': "1.22.3",
-        'appium:appPackage':  "com.digitalai.ExperiBank",
-        'appium:app': 'cloud:com.digitalai.ExperiBank/.LoginActivity',
-        'appium:deviceQuery': "@os='android' and @category='PHONE'",
-        strictSSL: false
+        strictSSL: false,
+        'appium:options': {
+            'appPackage': "com.experitest.ExperiBank",
+            'app': "cloud:com.experitest.ExperiBank/.LoginActivity",
+        },
+        'digitalai:options': {
+            'testName': "Quick Start Android NATIVE Demo",
+            'accessKey': "<ACCESS_KEY>",
+            'appiumVersion': "1.22.3",
+            'deviceQuery': "@os='android' and @category='PHONE'",
+        },
     }],
 
     acceptSslCerts: true,
@@ -79,7 +83,7 @@ exports.config = {
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
     //services: ['chromedriver'],
-    
+
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
     // see also: https://webdriver.io/docs/frameworks
@@ -103,7 +107,7 @@ exports.config = {
     reporters: ['spec'],
 
 
-    
+
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
