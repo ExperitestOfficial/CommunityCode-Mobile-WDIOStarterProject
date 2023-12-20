@@ -43,9 +43,9 @@ exports.config = {
 
     capabilities: [{
         platformName: 'IOS',
-        'experitest:testName': "Quick Start iOS WEB Demo",
-        'experitest:accessKey': "<ACCESS_KEY>",
-        'experitest:appiumVersion': "1.22.3",
+        'digitalai:testName': "Quick Start iOS WEB Demo",
+        'digitalai:accessKey': "<ACCESS_KEY>",
+        'digitalai:appiumVersion': "1.22.3",
         browserName: 'safari',
         'appium:deviceQuery': "@os='ios' and @category='PHONE'",
         strictSSL: false

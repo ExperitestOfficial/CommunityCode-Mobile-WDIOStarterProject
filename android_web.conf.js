@@ -43,9 +43,9 @@ exports.config = {
 
     capabilities: [{
         platformName: 'ANDROID',
-        'experitest:testName': "Quick Start Android WEB Demo",
-        'experitest:accessKey': "<ACCESS_KEY>",
-        'experitest:appiumVersion': "1.22.3",
+        'digitalai:testName': "Quick Start Android WEB Demo",
+        'digitalai:accessKey': "<ACCESS_KEY>",
+        'digitalai:appiumVersion': "1.22.3",
         browserName: 'chrome',
         'appium:deviceQuery': "@os='android' and @category='PHONE'",
         strictSSL: false
