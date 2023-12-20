@@ -43,11 +43,11 @@ exports.config = {
     //
     capabilities: [{
         platformName: 'ANDROID',
-        'experitest:testName': "Quick Start Android NATIVE Demo",
-        'experitest:accessKey': "<ACCESS_KEY>",
-        'experitest:appiumVersion': "1.22.3",
-        'appium:appPackage':  "com.experitest.ExperiBank",
-        'appium:app': 'cloud:com.experitest.ExperiBank/.LoginActivity',
+        'digitalai:testName': "Quick Start Android NATIVE Demo",
+        'digitalai:accessKey': "<ACCESS_KEY>",
+        'digitalai:appiumVersion': "1.22.3",
+        'appium:appPackage':  "com.digitalai.ExperiBank",
+        'appium:app': 'cloud:com.digitalai.ExperiBank/.LoginActivity',
         'appium:deviceQuery': "@os='android' and @category='PHONE'",
         strictSSL: false
     }],

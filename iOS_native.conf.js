@@ -44,11 +44,11 @@ exports.config = {
     capabilities: [{
     
         platformName: 'IOS',
-        'experitest:testName': "Quick Start iOS NATIVE Demo",
-        'experitest:accessKey': "<ACCESS_KEY>",
-        'experitest:appiumVersion': "1.22.3",
-        'appium:bundleId':  "com.experitest.ExperiBank",
-        'appium:app': 'cloud:com.experitest.ExperiBank',
+        'digitalai:testName': "Quick Start iOS NATIVE Demo",
+        'digitalai:accessKey': "<ACCESS_KEY>",
+        'digitalai:appiumVersion': "1.22.3",
+        'appium:bundleId':  "com.digitalai.ExperiBank",
+        'appium:app': 'cloud:com.digitalai.ExperiBank',
         'appium:deviceQuery': "@os='ios' and @category='PHONE'",
         strictSSL: false
     }],
